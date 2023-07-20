@@ -1,0 +1,25 @@
+<div class="col-md-12">
+  <%= form_with model: @contact, data: { turbo: false} do |f| %>
+    <% if @contact.errors.any? %>
+      <div class="alert alert-warning d-flex align-items-center justify-content-center" id="error_explanation" role="alert">
+        <h5><%= pluralize(@contact.errors.count, "error") %> prohibited this Message from being submited:</h5>
+        <ul>
+          <% @contact.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="col-md-12">
+      <div class="col-md-6 mb-3">
+        <%= f.label :email, class: "form-label" %>
+        <%= f.email_field :email, class: "form-control", placeholder: "name@example.com" %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :message, class: "form-label" %>
+        <%= f.text_area :message, class: "form-control", rows: 3 %>
+      </div>
+      <%= f.submit "Submit", class: "btn btn-primary mb-4" %>
+    <% end %>
+  </div>
+</div>
