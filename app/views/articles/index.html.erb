@@ -1,0 +1,29 @@
+<style>
+  .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Указать количество строк, на которое хотите ограничить текст */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+<div class="container-fluid">
+  <% @articles.each do |a| %>
+    <div class="card mb-3" style="max-width: 100%">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <%= image_tag 'beach-1408077.jpg', class: "img-fluid rounded-start", alt: "..." %>
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title"><%= a.title %></h5>
+            <p class="card-text"><%= a.text %></p>
+            <div class="d-flex justify-content-between">
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              <a href="<%= article_path(a) %>" class="stretched-link">Go to this Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
