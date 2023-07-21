@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.create article_params
     if @article.valid?
-      redirect_to root_path
+      redirect_to @article
     else
       render :new, status: :unprocessable_entity
     end
