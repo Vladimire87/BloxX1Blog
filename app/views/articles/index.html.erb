@@ -13,13 +13,13 @@
         <div class="col-md-6">
           <%= image_tag 'beach-1408077.jpg', class: "img-fluid rounded-start", alt: "..." %>
         </div>
-        <div class="col-md-6">
-          <div class="card-body">
+        <div class="col-md-6 ">
+          <div class="card-body d-flex flex-column h-100">
             <h5 class="card-title"><%= a.title %></h5>
             <p class="card-text"><%= a.text %></p>
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between mt-auto">
               <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              <a href="<%= article_path(a) %>" class="stretched-link">Go to this Article</a>
+              <%= link_to 'Go to this Article', article_path(a), class: 'stretched-link' %>
             </div>
           </div>
         </div>
