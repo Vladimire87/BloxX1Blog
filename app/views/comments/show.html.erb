@@ -1,7 +1,7 @@
 <div class="bg-body-tertiary p-4">
   <div class="mb-4">
     <h3>
-      <%=  @article.comments.size %>
+      <%= @comments.size %>
       <small class="text-body-secondary">Comments</small>
     </h3>
   </div>
@@ -9,10 +9,10 @@
     <div class="bg-dark-subtle mb-2 p-4">
       <figure >
         <blockquote class="blockquote">
-          <p><%= p c.body %></p>
+          <p><%= c.body %></p>
         </blockquote>
         <figcaption class="blockquote-footer">
-          <cite title="Source Title"><%= p c.author %></cite>
+          <cite title="Source Title"><%= c.author %></cite>
         </figcaption>
       </figure>
     </div>
