@@ -5,3 +5,7 @@
   <p><%=@article.text%></p>
 </article>
 <%= link_to 'Edit', edit_article_path, class: "btn btn-primary" %>
+<%= link_to 'Delete', article_path(@article), class: "btn btn-primary", data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
