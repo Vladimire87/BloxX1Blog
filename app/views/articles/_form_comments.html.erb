@@ -1,6 +1,6 @@
 <div class="col-md-12 mt-4">
   <h3>Add Comment:</h3>
-  <%= form_for([@article, @article.comments.build]) do |f| %>
+  <%= form_for([@article, @comment]) do |f| %>
     <div class="col-md-12 mt-4">
       <div class="col-md-12 mb-3">
         <%= f.label :author, class: "form-label" %>
