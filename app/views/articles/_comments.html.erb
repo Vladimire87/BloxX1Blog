@@ -5,14 +5,14 @@
       <small class="text-body-secondary">Comments</small>
     </h3>
   </div>
-  <% @article.comments.each do |c|%>
+  <% @article.comments.order("created_at desc").each do |c|%>
     <div class="bg-dark-subtle mb-2 p-4">
       <figure >
         <blockquote class="blockquote">
-          <p><%= p c.body %></p>
+          <p><%= c.body %></p>
         </blockquote>
         <figcaption class="blockquote-footer">
-          <cite title="Source Title"><%= p c.author %></cite>
+          <cite title="Source Title"><%= c.author %></cite>
         </figcaption>
       </figure>
     </div>
