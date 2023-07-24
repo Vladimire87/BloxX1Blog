@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @articles = Article.all.order('created_at DESC')
+    @articles = Article.all.order("created_at DESC")
   end
 
   def new
@@ -36,7 +37,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    
+
     redirect_to root_path, status: :see_other
   end
 
