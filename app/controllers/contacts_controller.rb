@@ -10,5 +10,4 @@ class ContactsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
 end

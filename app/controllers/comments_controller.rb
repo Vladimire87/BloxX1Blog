@@ -9,10 +9,10 @@ class CommentsController < ApplicationController
     else
       render :show
     end
-
   end
-  
+
   private
+
   def comment_params
     params.require(:comment).permit(:author, :body)
   end
