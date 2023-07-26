@@ -18,7 +18,7 @@
             <h5 class="card-title"><%= a.title %></h5>
             <p class="card-text"><%= a.text %></p>
             <div class="d-flex justify-content-between mt-auto">
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              <p class="card-text"><small class="text-body-secondary">Updated at: <%= a.updated_at.localtime.strftime('%D') %></small></p>
               <%= link_to 'Go to this Article', article_path(a), class: 'stretched-link' %>
             </div>
           </div>

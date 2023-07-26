@@ -2,7 +2,8 @@
   <div class="mb-4">
     <h3>
       <%=  @article.comments.size %>
-      <small class="text-body-secondary">Comments</small>
+      <small class="text-body-secondary"> <%= (@article.comments.size == 1) ? 'Comment' : 'Comments' %>
+      </small>
     </h3>
   </div>
   <% @article.comments.order("created_at desc").each do |c|%>
