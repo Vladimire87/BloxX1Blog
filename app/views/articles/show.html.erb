@@ -1,8 +1,7 @@
-<h1 class="text-center bg-info-subtle">Article Show</h1>
 <article class="blog-post">
   <h2 class="display-5 link-body-emphasis mb-1"><%=@article.title%></h2>
-  <p class="blog-post-meta"><%=@article.created_at%> by <a href="">Vladimir</a></p>
-  <p><%=@article.text%></p>
+  <p class="blog-post-meta"><%=@article.created_at.localtime.strftime('%d-%B-%Y %H:%M') %> by <a href=""><%=@article.author%></a></p>
+  <p><%=simple_format @article.text%></p>
 </article>
 <%= link_to 'Edit', edit_article_path, class: "btn btn-primary" %>
 <%= link_to 'Delete', article_path(@article), class: "btn btn-primary", data: {

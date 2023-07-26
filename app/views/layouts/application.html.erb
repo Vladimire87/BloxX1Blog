@@ -13,7 +13,7 @@
   </head>
   <body class="bg-light">
     <div class="bg-body min-vh-100">
-      <nav class="py-2 bg-body-tertiary border-bottom">
+      <nav class="py-2 bg-body-tertiary border-bottom mb-4">
         <div class="container d-flex flex-wrap">
           <ul class="nav me-auto">
             <li class="nav-item"><a href="<%=root_path%>" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
@@ -34,8 +34,14 @@
         </div>
       </nav>
       <div class="container-md">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <div>
+          <% if notice.present? %>
+            <p class="notice"><%= notice %></p>
+          <% end %>
+          <% if alert.present? %>
+            <p class="alert"><%= alert %></p>
+          <% end %>
+        </div>
         <%= yield %></div>
     </div>
   </body>
