@@ -1,8 +1,8 @@
 <div class="bg-body-tertiary p-4">
   <div class="mb-4">
     <h3>
-      <%=  @article.comments.size %>
-      <small class="text-body-secondary"> <%= (@article.comments.size == 1) ? 'Comment' : 'Comments' %>
+      <small class="text-body-secondary">
+        <%= pluralize(@article.comments.size, "Comment") %>
       </small>
     </h3>
   </div>
