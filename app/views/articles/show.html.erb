@@ -1,7 +1,9 @@
 <article class="blog-post">
   <h2 class="display-5 link-body-emphasis mb-1"><%=@article.title%></h2>
   <p class="blog-post-meta"><%=@article.created_at.localtime.strftime('%d-%B-%Y %H:%M') %> by <a href=""><%=@article.author%></a></p>
-  <p><%=simple_format @article.text%></p>
+  <div class="trix-content">
+    <%= @article.content %>
+  </div>
 </article>
 <% if current_user.nil? || current_user.username != @article.author %>
 <% else %>
