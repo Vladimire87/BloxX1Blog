@@ -5,7 +5,7 @@
     <%= @article.content %>
   </div>
 </article>
-<% if current_user.nil? || current_user.username != @article.author %>
+<% if owner?(@article) %>
 <% else %>
   <%= link_to 'Edit', edit_article_path, class: "btn btn-primary" %>
   <%= link_to 'Delete', article_path(@article), class: "btn btn-primary", data: {
