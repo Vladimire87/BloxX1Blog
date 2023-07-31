@@ -3,7 +3,7 @@ class Article < ApplicationRecord
   validates_length_of :title, maximum: 140
   validates_length_of :text, maximum: 4000
 
-  has_rich_text :text
+  # has_rich_text :text
   has_many :comments, dependent: :destroy
 
   def subject
