@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "Article Creation" do
-  before(:all) do
+  before(:each) do
     sign_up
   end
   scenario "allows user to visit new artcile page" do
