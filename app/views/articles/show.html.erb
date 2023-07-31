@@ -2,7 +2,7 @@
   <h2 class="display-5 link-body-emphasis mb-1"><%=@article.title%></h2>
   <p class="blog-post-meta"><%=@article.created_at.localtime.strftime('%d-%B-%Y %H:%M') %> by <a href=""><%=@article.author%></a></p>
   <div class="trix-content">
-    <%= @article.content %>
+    <%= @article.text %>
   </div>
 </article>
 <% if owner?(@article) %>
@@ -12,6 +12,11 @@
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %>
+<% end %>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
 <% end %>
 <%= render 'form_comments' %>
 <%= render 'comments' %>
