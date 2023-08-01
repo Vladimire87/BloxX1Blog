@@ -80,3 +80,5 @@ gem "dockerfile-rails", ">= 1.5", group: :development
 gem "devise", "~> 4.9"
 
 gem "standard", "~> 1.30"
+
+gem "erb-formatter"
