@@ -20,8 +20,13 @@
       </div>
       <%# File Input %>
       <div class="mb-3">
-        <label for="formFile" class="form-label">Select image for Article</label>
-        <input class="form-control" type="file" id="formFile">
+        <% if @article.thumbnail.attached? %>
+          <%= image_tag @article.thumbnail_edit %>
+        <% end %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :thumbnail, 'Select thumbnail image for Article', class: "form-label" %>
+        <%= f.file_field :thumbnail, class: "form-control" %>
       </div>
       <div class="mb-3">
         <%= f.label :text, class: "form-label" %>
