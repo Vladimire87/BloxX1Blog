@@ -13,10 +13,5 @@
                     turbo_confirm: "Are you sure?"
                   } %>
 <% end %>
-<% flash.each do |type, msg| %>
-  <div class="alert alert-info">
-    <%= msg %>
-  </div>
-<% end %>
 <%= render 'form_comments' %>
 <%= render 'comments' %>

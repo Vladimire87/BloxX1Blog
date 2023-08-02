@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  validates :title, :text, :thumbnail, presence: true
+  validates :title, :text, presence: true
   validates_length_of :title, maximum: 140
   validates_length_of :text, maximum: 4000
 

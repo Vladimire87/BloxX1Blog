@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.create article_params
     if @article.valid?
-      redirect_to @article
+      redirect_to @article, notice: "Article Created"
     else
       render :new, status: :unprocessable_entity
     end

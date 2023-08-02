@@ -7,7 +7,7 @@
         <p class="lead mb-0"><%= link_to 'Continue reading...', article_path(a), class: "text-body-emphasis fw-bold" %></p>
       </div>
       <div class="col-lg-6">
-        <%= image_tag a.thumbnail_index, class: "rounded float-end d-none d-sm-block" %>
+        <%= image_tag a.thumbnail_index, class: "rounded float-end d-none d-sm-block" if a.thumbnail.present? %>
       </div>
     </div>
   </div>
