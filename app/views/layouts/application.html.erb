@@ -18,12 +18,12 @@
     <div class="container">
       <div>
         <% if notice.present? %>
-          <p class="notice">
+          <p class="alert alert-primary" role="alert">
             <%= notice %>
           </p>
         <% end %>
         <% if alert.present? %>
-          <p class="alert">
+          <p class="alert alert-warning" role="alert">
             <%= alert %>
           </p>
         <% end %>
