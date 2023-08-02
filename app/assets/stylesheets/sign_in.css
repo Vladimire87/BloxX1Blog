@@ -1,7 +1,7 @@
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
 .form-signin {
   max-width: 330px;
@@ -12,13 +12,39 @@ body {
   z-index: 2;
 }
 
-.form-signin input[type="email"] {
+/* Sign up */
+#floatingUsername {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.form-signin input[type="password"] {
+#floatingEmail {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#floatingPassword {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#floatingPasswordConfirmation {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Sign in */
+#floatingSignInEmail {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#floatingSignInPassword {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
