@@ -6,11 +6,10 @@
         <%= f.hidden_field :author, class: "form-control", value: current_user.username if user_signed_in? %>
       </div>
       <div class="mb-3">
-        <%= f.label :body, 'Comment', class: "form-label" %>
-        <%= f.text_area :body, class: "form-control", rows: 5 %>
+        <%= f.text_area :body, class: "form-control", rows: 5, maxlength: "1000" %>
       </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <%= f.submit class: "btn btn-primary mb-4", disabled: !user_signed_in?%>
+        <%= f.submit class: "btn btn-primary mb-4"%>
       </div>
     <% end %>
   </div>
