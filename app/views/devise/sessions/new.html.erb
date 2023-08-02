@@ -3,12 +3,12 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     <div class="form-floating">
-      <%= f.email_field :email, class: "form-control", id: "floatingInput", placeholder: "name@example.com", autofocus: true, autocomplete: "email" %>
-      <label for="floatingInput">Email address</label>
+      <%= f.email_field :email, class: "form-control", id: "floatingSignInEmail", placeholder: "name@example.com" %>
+      <label for="floatingSignInEmail">Email address</label>
     </div>
     <div class="form-floating">
-      <%= f.password_field :password, class: "form-control", id: "floatingPassword", placeholder: "Password", autocomplete: "current-password" %>
-      <label for="floatingPassword">Password</label>
+      <%= f.password_field :password, class: "form-control", id: "floatingSignInPassword", placeholder: "Password", autocomplete: "current-password" %>
+      <label for="floatingSignInPassword">Password</label>
     </div>
     <% if devise_mapping.rememberable? %>
       <div class="form-check text-start my-3">
